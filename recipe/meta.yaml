@@ -1,4 +1,4 @@
-{% set version = '1.6-4' %}
+{% set version = "1.6-5" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/arules_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/arules/arules_{{ version }}.tar.gz
-  sha256: 165da19b7f6adafc7ff12c0e34cf0e16d4e7cf01fda6c00e4c03ff3e1a2b6c00
+  sha256: 9ba0674eeb1fd5c54a894dfd0ab1e4a7c282fd796f8e9ff62667b34d91759b2d
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -44,13 +44,11 @@ test:
 about:
   home: https://github.com/mhahsler/arules
   license: GPL-3
-  summary: Provides the infrastructure for representing, manipulating and analyzing transaction
-    data and patterns (frequent itemsets and association rules). Also provides C implementations
-    of the association mining algorithms Apriori and Eclat.  See Christian Borgelt (2012)
-    <doi:10.1002/widm.1074>.
+  summary: Provides the infrastructure for representing, manipulating and analyzing transaction data and patterns (frequent itemsets and association rules). Also
+    provides C implementations of the association mining algorithms Apriori and Eclat.  See Christian Borgelt (2012) <doi:10.1002/widm.1074>.
   license_family: GPL3
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
