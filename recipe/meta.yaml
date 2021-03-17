@@ -1,4 +1,4 @@
-{% set version = "1.6-6" %}
+{% set version = "1.6-7" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/arules_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/arules/arules_{{ version }}.tar.gz
-  sha256: 7552a8383be43d057ac5ff370cfc7d4c1de0125eb34d7c22cfa50afba39463de
+  sha256: 3830975c574d711b2e0b4aa522bec063404479690ddb5120e2d6aae59a9d0055
 
 build:
   merge_build_host: true  # [win]
