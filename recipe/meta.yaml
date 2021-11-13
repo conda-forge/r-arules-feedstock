@@ -28,13 +28,16 @@ requirements:
     - {{ posix }}sed               # [win]
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-matrix >=1.2_0
+    - r-generics
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
     - r-matrix >=1.2_0
+    - r-generics
 
 test:
   commands:
