@@ -16,6 +16,11 @@ build:
   rpaths:
     - lib/R/lib/
     - lib/
+  skip: true  # [r_base == "4.4"]
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
@@ -31,11 +36,11 @@ requirements:
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - r-matrix >=1.2_0
+    - r-matrix >=1.4_0
     - r-generics
   run:
-    - r-base
-    - r-matrix >=1.2_0
+     - r-base
+    - r-matrix >=1.4_0
     - r-generics
 
 test:
