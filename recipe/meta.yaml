@@ -39,7 +39,7 @@ requirements:
     - r-matrix >=1.4_0
     - r-generics
   run:
-     - r-base
+    - r-base
     - r-matrix >=1.4_0
     - r-generics
 
