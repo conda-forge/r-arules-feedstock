@@ -1,4 +1,4 @@
-{% set version = "1.7.14" %}
+{% set version = "1.7.15" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/arules_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/arules/arules_{{ version }}.tar.gz
-  sha256: ce9523497027ca3e12af453a80e3b67ccb0edabc7f1ebfd6a0c3941b4a2907cd
+  sha256: e8f56ff9613912dc007adb015c2c4a50efd8418930c59e289eebd01d9b70caeb
 
 build:
   number: 0
